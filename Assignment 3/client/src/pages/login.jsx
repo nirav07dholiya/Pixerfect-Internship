@@ -1,12 +1,9 @@
 import axios from 'axios';
 import React, { useState } from 'react'
-import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
-import { setUser } from '../redux/slices/user.js';
 
-const login = () => {
+const login = ({registered}) => {
 
-    const dispatch = useDispatch();
     const navigate = useNavigate();
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
@@ -18,19 +15,17 @@ const login = () => {
             const response = await axios.post("http://localhost:8000/api/users/login", {
                 email,
                 password
-            }, { withCredentials: true });
+            },{withCredentials: true});
 
-            console.log(response.data);
+            console.log(response.data); 
             if (response.status !== 200) {
                 throw new Error("Login failed");
             }
-            dispatch(setUser({ user: response.data }));
             navigate("/");
         } catch (error) {
             console.log(error);
         }
-        setEmail("");
-        setPassword("");
+        registered(true);
     };
 
     return (
@@ -61,7 +56,7 @@ const login = () => {
                 </button>
             </form>
         </div>
-    )
+)
 }
 
 export default login
