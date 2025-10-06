@@ -28,13 +28,43 @@ const register = ({ registered }) => {
     };
 
     return (
-        <div>
-            <h1>Register</h1>
-            <form onSubmit={handleRegister}>
-                <input type="text" name="username" placeholder="Username" value={username} onChange={(e) => setUsername(e.target.value)} />
-                <input type="text" name="email" placeholder="Email" value={email} onChange={(e) => setEmail(e.target.value)} />
-                <input type="password" name="password" placeholder="Password" value={password} onChange={(e) => setPassword(e.target.value)} />
-                <button type="submit" className='cursor-pointer'>Register</button>
+        <div className="w-[23vw] h-[60vh] flex flex-col justify-start items-center rounded-2xl shadow-xl p-5 bg-blue-500 gap-10">
+            <h1 className="text-4xl text-white py-3">Register</h1>
+            <form
+                onSubmit={handleRegister}
+                className="w-full h-auto flex flex-col justify-center items-center gap-5"
+            >
+                <input
+                    type="text"
+                    name="username"
+                    placeholder="Username"
+                    value={username}
+                    onChange={(e) => setUsername(e.target.value)}
+                    className="rounded-lg p-2 w-full border outline-none border-white text-white"
+                />
+                <input
+                    type="text"
+                    name="email"
+                    placeholder="Email"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    className="rounded-lg p-2 w-full border outline-none border-white text-white"
+                />
+                <input
+                    type="password"
+                    name="password"
+                    placeholder="Password"
+                    value={password}
+                    onChange={(e) => setPassword(e.target.value)}
+                    className="rounded-lg p-2 w-full border outline-none border-white text-white"
+                />
+                <p>Have an account?
+                    <span className="text-white cursor-pointer" onClick={() => navigate("/login")}> Log in</span>
+                </p>
+                
+                <button type="submit" className="cursor-pointer w-30 h-10 bg-white text-blue-600 rounded-lg font-semibold">
+                    Register
+                </button>
             </form>
         </div>
     );
