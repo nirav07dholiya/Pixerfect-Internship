@@ -78,7 +78,9 @@ const Home = () => {
             </div>
           ))
         ) : (
-          <div className="text-2xl font-semibold">No Blogs Available</div>
+          <span className="text-2xl font-semibold w-[70vw] text-center bg-green-300">
+            <div className="">No Blogs Available</div>
+         </span>
         )}
       </div>
 
@@ -109,4 +111,5 @@ const Home = () => {
 };
 
 export default Home;
+
 
