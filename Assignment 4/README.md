@@ -85,10 +85,10 @@ The React app will run on http://localhost:5173
 
 Create a .env file inside the server/ directory with the following variables:
 
-database_url = 'mongodb://localhost:27017/my-blog'
-PORT = 8000
-ORIGIN = 'http://localhost:5173'
-JWT_SECRET_KEY = 'duwhu#@$%^&h2dekwdmblkwndfw'  
+database_url = 'mongodb://localhost:27017/my-blog' \n
+PORT = 8000 \n
+ORIGIN = 'http://localhost:5173' \n 
+JWT_SECRET_KEY = 'duwhu#@$%^&h2dekwdmblkwndfw'  \n
 
 
 If your client also needs environment variables (e.g., API URL), create a .env inside the client/ folder:
