@@ -50,7 +50,7 @@ const Home = () => {
 
   return (
     <div className="w-full h-full flex flex-col py-4 items-center gap-3">
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div className="w-full px-[15vw] grid grid-cols-1 md:grid-cols-3 gap-6 place-items-center overflow-y-auto">
         {currentBlogs.length > 0 ? (
           currentBlogs.map((blog, index) => (
             <div
@@ -109,3 +109,4 @@ const Home = () => {
 };
 
 export default Home;
+
