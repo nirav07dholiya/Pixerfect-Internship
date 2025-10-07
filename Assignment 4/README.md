@@ -46,34 +46,36 @@ Make sure you have the following installed on your system:
 
 ### 1️⃣ Clone the Repository
 
-git clone https://github.com/nirav07dholiya/Pixerfect-Internship.git
-cd Assignment 4
+ - git clone https://github.com/nirav07dholiya/Pixerfect-Internship.git
+ - cd Assignment 4
 
 Install server dependencies:
 
-cd server
-npm install
+ - cd server
+ - npm install
 
 Install client dependencies:
 
-cd ../client
-npm install
+ - cd ../client
+ - npm install
 
 
 
 ---
 
-🚀 Running the Project
-▶️ Start the Server
-npm run dev
+##🚀 Running the Project
+
+### ▶️ Start the Server
+
+ - npm run dev
 
 The backend will start (by default) on http://localhost:8000
 
 You can change the port inside .env (see below).
 
-💻 Start the Client
-cd client
-npm run dev
+### 💻 Start the Client
+
+ - npm run dev
 
 The React app will run on http://localhost:5173
 
@@ -81,9 +83,9 @@ The React app will run on http://localhost:5173
 
 ---
 
-🔐 Environment Variables
+## 🔐 Environment Variables
 
-Create a .env file inside the server/ directory with the following variables:
+### Create a .env file inside the server/ directory with the following variables:
 
  - database_url = 'mongodb://localhost:27017/my-blog' 
  - PORT = 8000 
@@ -91,7 +93,7 @@ Create a .env file inside the server/ directory with the following variables:
  - JWT_SECRET_KEY = 'duwhu#@$%^&h2dekwdmblkwndfw'  
 
 
-If your client also needs environment variables (e.g., API URL), create a .env inside the client/ folder:
+### If your client also needs environment variables (e.g., API URL), create a .env inside the client/ folder:
 
  - VITE_SERVER_URL = 'http://localhost:8000'
 
