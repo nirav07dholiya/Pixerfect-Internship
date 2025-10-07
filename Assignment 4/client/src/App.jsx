@@ -40,7 +40,6 @@ const App = () => {
         if (response.data?.user) {
           dispatch(setUser({ user: response.data.user }));
         }
-        else setUserExist(false);
       } catch (error) {
         console.error("Error fetching user data:", error);
       }
